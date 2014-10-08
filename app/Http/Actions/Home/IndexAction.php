@@ -1,13 +1,14 @@
-<?php namespace Mfyu\Http\Actions;
+<?php namespace Mfyu\Http\Actions\Home;
 
-use Mfyu\Responders\HomeIndexResponder;
-use Mfyu\Services\HomeIndexService;
+use Mfyu\Http\Actions\Action;
+use Mfyu\Responders\Home\IndexResponder as HomeIndexResponder;
+use Mfyu\Services\Home\IndexService as HomeIndexService;
 
 /**
  * Class HomeIndexAction
  * @package Mfyu\Http\Actions
  */
-class HomeIndexAction extends Action {
+class IndexAction extends Action {
 
     /**
      * @var HomeIndexResponder
@@ -31,7 +32,8 @@ class HomeIndexAction extends Action {
      * @return $this
      */
     public function action() {
+        // the service is essentially your domain, be it a service, repository, command bus etc
         $data = $this->service->getData();
-        return $this->responder->respond($data, 'hello');
+        return $this->responder->respond($data);
     }
 } 

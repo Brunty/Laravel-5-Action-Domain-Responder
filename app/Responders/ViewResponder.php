@@ -26,7 +26,7 @@ class ViewResponder extends Responder {
      * @param $view
      * @return $this
      */
-    public function respond($data = [], $view) {
+    public function makeView($data = [], $view) {
         return $this->view->make($view)->with($data);
     }
 }

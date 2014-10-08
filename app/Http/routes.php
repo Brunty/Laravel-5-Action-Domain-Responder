@@ -11,4 +11,4 @@
 |
 */
 
-$router->get('/', 'HomeIndexAction@action');
+$router->get('/', 'Home\IndexAction@action');
