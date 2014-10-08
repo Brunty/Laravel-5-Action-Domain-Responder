@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7100344c-991b-429b-9a9f-ac41b9e6b19a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Responders/Home/IndexResponder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Services/Home/IndexService.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Services/Home/Service.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Responders/HomeIndexResponder.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Services/HomeIndexService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Services/HomeService.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Http/Actions/HomeIndexAction.php" afterPath="$PROJECT_DIR$/app/Http/Actions/Home/IndexAction.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Responders/ViewResponder.php" afterPath="$PROJECT_DIR$/app/Responders/ViewResponder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="l5-adr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,11 +37,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="laravel.log" pinned="false" current-in-tab="true">
+      <file leaf-file-name="laravel.log" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/storage/laravel.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="974">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="198">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.10432034" vertical-offset="0" max-vertical-offset="949">
+              <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -108,6 +111,7 @@
         <option value="$PROJECT_DIR$/app/Services/Home/Service.php" />
         <option value="$PROJECT_DIR$/app/Http/Actions/Home/IndexAction.php" />
         <option value="$PROJECT_DIR$/storage/laravel.log" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -459,6 +463,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10432034" vertical-offset="0" max-vertical-offset="949">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
           <folding />
         </state>
       </provider>
