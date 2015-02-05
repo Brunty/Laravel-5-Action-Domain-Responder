@@ -1,10 +1,7 @@
-/bootstrap/compiled.php
 /vendor
+/node_modules
+/bower_components
+/.git
 /.idea
-/storage
-composer.phar
-composer.lock
-.env.*.php
-.env.php
-.DS_Store
-Thumbs.db
+/.project
+.env

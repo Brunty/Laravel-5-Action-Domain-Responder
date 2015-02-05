@@ -5,20 +5,24 @@
 	"license": "MIT",
 	"type": "project",
 	"require": {
-		"laravel/framework": "~5.0"
+		"laravel/framework": "5.0.*"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",
-        "barryvdh/laravel-ide-helper": "1.*"
+		"phpspec/phpspec": "~2.1"
 	},
 	"autoload": {
 		"classmap": [
-			"database",
-			"tests/TestCase.php"
+			"database"
 		],
 		"psr-4": {
-			"Mfyu\\": "app/"
+			"Brunty\\": "app/"
 		}
+	},
+	"autoload-dev": {
+		"classmap": [
+			"tests/TestCase.php"
+		]
 	},
 	"scripts": {
 		"post-install-cmd": [
@@ -27,15 +31,14 @@
 		],
 		"post-update-cmd": [
 			"php artisan clear-compiled",
-            "php artisan ide-helper:generate",
 			"php artisan optimize"
 		],
 		"post-create-project-cmd": [
+			"php -r \"copy('.env.example', '.env');\"",
 			"php artisan key:generate"
 		]
 	},
 	"config": {
 		"preferred-install": "dist"
-	},
-	"minimum-stability": "dev"
+	}
 }

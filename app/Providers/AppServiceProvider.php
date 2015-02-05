@@ -1,51 +1,34 @@
-<?php namespace Mfyu\Providers;
+<?php namespace Brunty\Providers;
 
-use Illuminate\Routing\Router;
-use Illuminate\Routing\Stack\Builder as Stack;
-use Illuminate\Foundation\Support\Providers\AppServiceProvider as ServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider {
 
 	/**
-	 * All of the application's route middleware keys.
-	 *
-	 * @var array
-	 */
-	protected $middleware = [
-		'auth' => 'Mfyu\Http\Middleware\AuthMiddleware',
-		'auth.basic' => 'Mfyu\Http\Middleware\BasicAuthMiddleware',
-		'csrf' => 'Mfyu\Http\Middleware\CsrfMiddleware',
-		'guest' => 'Mfyu\Http\Middleware\GuestMiddleware',
-	];
-
-	/**
-	 * The application's middleware stack.
-	 *
-	 * @var array
-	 */
-	protected $stack = [
-		'Mfyu\Http\Middleware\MaintenanceMiddleware',
-		'Illuminate\Cookie\Middleware\Guard',
-		'Illuminate\Cookie\Middleware\Queue',
-		'Illuminate\Session\Middleware\Reader',
-		'Illuminate\Session\Middleware\Writer',
-	];
-
-	/**
-	 * Build the application stack based on the provider properties.
+	 * Bootstrap any application services.
 	 *
 	 * @return void
 	 */
-	public function stack()
+	public function boot()
 	{
-		$this->app->stack(function(Stack $stack, Router $router)
-		{
-			return $stack
-				->middleware($this->stack)->then(function($request) use ($router)
-				{
-					return $router->dispatch($request);
-				});
-			});
+		//
+	}
+
+	/**
+	 * Register any application services.
+	 *
+	 * This service provider is a great spot to register your various container
+	 * bindings with the application. As you can see, we are registering our
+	 * "Registrar" implementation here. You can add your own bindings too!
+	 *
+	 * @return void
+	 */
+	public function register()
+	{
+		$this->app->bind(
+			'Illuminate\Contracts\Auth\Registrar',
+			'Brunty\Services\Registrar'
+		);
 	}
 
 }

@@ -1,14 +1,14 @@
-<?php namespace Mfyu;
+<?php namespace Brunty;
 
-use Illuminate\Auth\UserTrait;
+use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Auth\Reminders\RemindableTrait;
-use Illuminate\Contracts\Auth\User as UserContract;
-use Illuminate\Contracts\Auth\Remindable as RemindableContract;
+use Illuminate\Auth\Passwords\CanResetPassword;
+use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
+use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
-class User extends Model implements UserContract, RemindableContract {
+class User extends Model implements AuthenticatableContract, CanResetPasswordContract {
 
-	use UserTrait, RemindableTrait;
+	use Authenticatable, CanResetPassword;
 
 	/**
 	 * The database table used by the model.
@@ -16,6 +16,13 @@ class User extends Model implements UserContract, RemindableContract {
 	 * @var string
 	 */
 	protected $table = 'users';
+
+	/**
+	 * The attributes that are mass assignable.
+	 *
+	 * @var array
+	 */
+	protected $fillable = ['name', 'email', 'password'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.

@@ -1,10 +1,7 @@
-<?php namespace Mfyu\Services\Home;
+<?php namespace Brunty\Services\Home;
 
-use Mfyu\Services\Service as HomeService;
-
-class IndexService extends HomeService {
-
-    public function getData() {
-        return ['this'  =>  'could be anything you want'];
-    }
+class IndexService {
+	public function getData() {
+		return ['my-data' => 'something goes here'];
+	}
 }

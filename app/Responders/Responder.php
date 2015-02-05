@@ -1,5 +1,5 @@
-<?php namespace Mfyu\Responders;
+<?php namespace Brunty\Responders;
 
-class Responder {
-
+abstract class Responder {
+	
 }
